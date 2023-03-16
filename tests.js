@@ -27,7 +27,19 @@ describe(`helloWorld`, function(){
     it('should return a string `Hello, Pat!', function () {
         expect(sayHello(`Pat`)).toBe(`Hello, Pat!`);
     });
-    it('should  return a string `Hello, World`!', function () {
-        expect(sayHello(false)).toBe(`Hello, World!`);
+    it('should return a string `Hello, World`!', function () {
+        expect(sayHello(`World`)).toBe(`Hello, World!`);
     });
 })
+
+describe(`isFive`, function () {
+    it('should a take in a function called isFive', function () {
+        expect(typeof isFive).toBe(`function`);
+    });
+    it('should always return a boolean expression', function () {
+        expect(typeof isFive()).toBe(`boolean`);
+    });
+    it(`should return '5' as a boolean` , function () {
+        expect(isFive('5')).toBe(false);
+    });
+});
