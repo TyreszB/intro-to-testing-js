@@ -19,12 +19,15 @@ describe(`helloWorld`, function(){
         expect(typeof sayHello).toBe(`function`);
     });
     it('should return a string', function () {
-        expect(typeof sayHello()).toBe(`string`)
+        expect(typeof sayHello()).toBe(`string`);
     });
     it('should return a string `Hello, Alex!', function () {
-        expect(sayHello(`Alex`)).toBe(`Hello, Alex!`)
+        expect(sayHello(`Alex`)).toBe(`Hello, Alex!`);
     });
     it('should return a string `Hello, Pat!', function () {
-        expect(sayHello(`Pat`)).toBe(`Hello, Pat!`)
+        expect(sayHello(`Pat`)).toBe(`Hello, Pat!`);
+    });
+    it('should  return a string `Hello, World`!', function () {
+        expect(sayHello(false)).toBe(`Hello, World!`);
     });
 })

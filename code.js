@@ -4,8 +4,13 @@ const helloWorld= function () {
 }
 
 function sayHello(input){
-    return "Hello, " + input + "!";
+    if (typeof input === 'string') {
+        return "Hello, " + input + "!";
+    }else{
+        return `Hello, World!`;
+    }
 }
 
 sayHello(`Alex`);
-sayHello(`Pat`)
+sayHello(`Pat`);
+sayHello(`World`)
