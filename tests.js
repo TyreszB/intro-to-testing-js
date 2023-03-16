@@ -104,3 +104,30 @@ describe(`isVowel`, function(){
     });
 
 });
+
+describe(`add`, function (){
+    it('should define a function', function () {
+        expect(typeof add).toBe('function');
+    });
+    it('should return the value of 2 and 3 equals 5', function (){
+        expect(add(3,2)).toBe(5);
+    });
+    it('should return the value of -9 and -3 equals -12', function (){
+        expect(add(-3,-9)).toBe(-12);
+    });
+    it('should return the value of "5" and 6 equals 11', function (){
+        expect(add(6,'5')).toBe(11);
+    });
+    it('should return the value of "-4" and "10" equals 6', function (){
+        expect(add("10","-4")).toBe(6);
+    });
+    it('should return the value of "banana" and "split" equals NaN', function (){
+        expect(add('banana','split')).toBe('nan');
+    });
+    it('should return the value of 2 and "apples" equals NaN', function (){
+        expect(add(2,'apples')).toBe('nan');
+    });
+    it('should return the value of "banana" and "split" equals NaN', function (){
+        expect(add()).toBe('nan');
+    });
+});
