@@ -43,3 +43,64 @@ describe(`isFive`, function () {
         expect(isFive('5')).toBe(false);
     });
 });
+
+describe(`isEven`, function (){
+    it('should define a function named isFive', function () {
+        expect(typeof isEven).toBe(`function`)
+    });
+    it('should return a boolean whn called', function () {
+        expect(typeof  isEven()).toBe(`boolean`);
+    });
+    it('should return true when isEven(2)', function () {
+        expect (isEven(2)).toBe(true);
+    });
+    it('should return true when isEven(-4)', function () {
+        expect(isEven(-4)).toBe(true);
+    });
+    it('should return false when isEven(3)', function () {
+        expect(isEven(3)).toBe(false);
+    });
+    it('should return false when isEven("banana")', function () {
+        expect(isEven('banana')).toBe(false);
+    });
+    it('should return false when isEven("8")', function () {
+        expect(isEven("8")).toBe(true);
+    });
+    it('should return false when isEven(Infinity)', function () {
+        expect(isEven(Infinity)).toBe(false);
+    });
+    it('should return false when a boolean is called', function () {
+        expect(isEven('boolean')).toBe(false);
+    });
+})
+
+describe(`isVowel`, function(){
+    it('should define a function', function (){
+        expect(typeof isVowel).toBe(`function`);
+    });
+    it('should return a boolean', function (){
+        expect(typeof isVowel()).toBe(`boolean`)
+    });
+    it('should return "a" as true', function (){
+        expect(isVowel("a")).toBe(true)
+    });
+    it('should return "A" as true', function (){
+        expect(isVowel("A")).toBe(true)
+    });
+    it('should return "y" as false', function (){
+        expect(isVowel("y")).toBe(false)
+    });
+    it('should return 4 as false', function (){
+        expect(isVowel("4")).toBe(false)
+    });
+    it('should return "y" as false', function (){
+        expect(isVowel('boolean')).toBe(false)
+    });
+    it('should return "banana" as false', function (){
+        expect(isVowel("banana")).toBe(false)
+    });
+    it('should return "y" as false', function (){
+        expect(isVowel()).toBe(false)
+    });
+
+});

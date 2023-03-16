@@ -12,10 +12,6 @@ function sayHello(input){
 
 }
 
-sayHello(`Alex`);
-sayHello(`Pat`);
-sayHello(`World`);
-
 function isFive(input) {
     if(input === 5){
         return true;
@@ -24,5 +20,21 @@ function isFive(input) {
     }
 }
 
-console.log(isFive('5'));
-isFive(5);
+function isEven(input){
+    if (input % 2 == 0){
+        return true;
+    } else{
+        return false;
+    }
+}
+
+function isVowel(input){
+    if(input === 'a'){
+        return true;
+    }else if(input === 'A'){
+        return true;
+    }else{
+        return false
+    }
+}
+
